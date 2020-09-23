@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+        <record id="ir_mail_server_fake" model="ir.mail_server">
+            <field name="name">fake_outgoing@fake.com</field>
+            <field name="smtp_host">localhost1</field>
+            <field name="smtp_port">25</field>
+        </record>
+
+</odoo>

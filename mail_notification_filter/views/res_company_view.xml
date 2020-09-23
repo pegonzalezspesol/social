@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <!-- Inherit Form View to Modify it -->
+       <record id="res_company_mail_form_inherit" model="ir.ui.view">
+           <field name="name">res.company.mail.form.inherit</field>
+           <field name="model">res.company</field>
+           <field name="inherit_id" ref="base.view_company_form"/>
+           <field name="arch" type="xml">
+               <notebook position="inside">
+                    <page string="Notification System">
+                        <group>
+                            <field name="fake_mail_server_id"/>
+                            <separator string="Notification Allowed Models"/>
+                            <field name="model_enabled_ids" nolabel="1" colspan="4" col="2">
+                                <tree editable="False">
+                                    <field name="model"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+               </notebook>
+           </field>
+       </record>
+    </data>
+</odoo>
